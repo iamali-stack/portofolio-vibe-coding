@@ -12,6 +12,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   basePath: process.env.NODE_ENV === 'production' ? '/portofolio-vibe-coding' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portofolio-vibe-coding' : '',
   // Additional configurations can be added here
 }
 

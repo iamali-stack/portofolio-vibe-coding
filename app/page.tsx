@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { getImagePathEnv } from "@/lib/image-utils"
 
 export default function HomePage() {
   return (
@@ -13,7 +14,7 @@ export default function HomePage() {
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 flex flex-col items-center justify-center text-center">
         <div className="mb-8">
           <Image
-            src="/profile-ali.png"
+            src={getImagePathEnv("/profile-ali.png")}
             alt="Ali Khaled"
             width={256}
             height={256}
