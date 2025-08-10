@@ -1,15 +1,18 @@
 /** @type {import('next').NextConfig} */
+const repoName = 'portofolio-vibe-coding'
+const isGithubPages = process.env.GITHUB_PAGES === 'true'
+
 const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   images: { unoptimized: true },
   output: 'export',
   trailingSlash: true,
-  // Only use basePath for static export (GitHub Pages)
-  basePath: '',
-  assetPrefix: '',
+  // Use basePath only for GitHub Pages export builds
+  basePath: isGithubPages ? `/${repoName}` : '',
+  assetPrefix: isGithubPages ? `/${repoName}/` : '',
   env: {
-    NEXT_PUBLIC_BASE_PATH: '',
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : '',
   },
 };
 
