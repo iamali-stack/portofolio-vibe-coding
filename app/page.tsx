@@ -14,7 +14,7 @@ export default function HomePage() {
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 flex flex-col items-center justify-center text-center">
         <div className="mb-8">
           <Image
-            src={getImagePathEnv("/profile-ali.png")}
+            src={getImagePathEnv("../../public/profile-ali.png")}
             alt="Ali Khaled"
             width={256}
             height={256}
