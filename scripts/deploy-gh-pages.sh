@@ -33,22 +33,7 @@ mkdir -p docs
 echo "📋 Copying files to docs/..."
 cp -r out/* docs/
 
-# Create a simple index redirect for GitHub Pages
-echo "🔗 Creating index redirect..."
-cat > docs/index.html << 'EOF'
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=./index.html">
-</head>
-<body>
-    <p>Redirecting to <a href="./index.html">portfolio</a>...</p>
-</body>
-</html>
-EOF
-
+# Note: The built index.html from Next.js is now preserved
 echo "✅ GitHub Pages deployment files ready!"
 echo ""
 echo "📋 Next steps:"
