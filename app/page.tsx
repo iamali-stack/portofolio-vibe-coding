@@ -11,14 +11,14 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-950 text-gray-100 font-sans flex flex-col">
       <Navigation />
 
-      <main className="flex-grow container mx-auto px-4 py-16 md:py-24 flex flex-col items-center justify-center text-center">
+      <main className="flex-grow container mx-auto px-4 py-4 md:py-8 flex flex-col items-center justify-center text-center">
         <div className="mb-8">
           <Image
-            src={getImagePathEnv("../public/profile-ali.png")}
+            src={getImagePathEnv("profile-ali.png")}
             alt="Ali Khaled"
-            width={256}
-            height={256}
-            className="rounded-full object-cover border-4 border-gray-800 shadow-lg"
+            width={300}
+            height={300}
+            className="rounded-full object-cover border-4 border-emerald-500 shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 hover:scale-105"
           />
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">

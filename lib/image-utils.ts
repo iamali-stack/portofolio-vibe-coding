@@ -1,20 +1,20 @@
-// Utility function to handle image paths for GitHub Pages
+// Utility function to handle image paths for GitHub Pages in Next.js
+// Utility function to handle image paths for GitHub Pages in Next.js
 export function getImagePath(path: string): string {
-  // Remove the ../public/ or ../../public/ or public/ prefix if it exists
-  const cleanPath = path.replace(/^\.\.\/public\//, '').replace(/^\.\.\/\.\.\/public\//, '').replace(/^public\//, '')
+  // Remove any leading ./, ../, or public/ from the path
+  const cleanPath = path.replace(/^(\.\/|\.{1,2}\/)*public\//, '').replace(/^(\.\/|\.{1,2}\/)+/, '');
   
-  // If we're in production (GitHub Pages), add the base path
-  if (typeof window !== 'undefined' && window.location.hostname === 'iamali-stack.github.io') {
-    return `/portofolio-vibe-coding/${cleanPath}`
-  }
-  // For local development, use the path as is
-  return `/${cleanPath}`
+  // Base path from env (set in next.config.js)
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  
+  // Return full path, making sure there's only one slash between parts
+  return `${basePath}/${cleanPath}`.replace(/\/+/g, '/');
 }
 
 // Alternative approach using environment variable
 export function getImagePathEnv(path: string): string {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portofolio-vibe-coding' : ''
-  // Remove the ../public/ or ../../public/ or public/ prefix if it exists
-  const cleanPath = path.replace(/^\.\.\/public\//, '').replace(/^\.\.\/\.\.\/public\//, '').replace(/^public\//, '')
-  return `${basePath}/${cleanPath}`
+  const cleanPath = path.replace(/^(\.\/|\.{1,2}\/)*public\//, '');
+  // Use the environment variable for conditional base path
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  return `${basePath}/${cleanPath}`.replace(/\/+/g, '/');
 }

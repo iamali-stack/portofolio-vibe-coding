@@ -1,19 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  images: { unoptimized: true },
   output: 'export',
   trailingSlash: true,
-  basePath: '/portofolio-vibe-coding',
-  assetPrefix: '/portofolio-vibe-coding',
-  // Additional configurations can be added here
-}
+  // Only use basePath for static export (GitHub Pages)
+  basePath: '',
+  assetPrefix: '',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '',
+  },
+};
 
-export default nextConfig
+export default nextConfig;
