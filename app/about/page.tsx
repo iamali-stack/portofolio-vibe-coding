@@ -3,6 +3,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Globe, Sparkles, Code, Rocket } from "lucide-react"
+import { getImagePathEnv } from "@/lib/image-utils"
 
 export default function AboutPage() {
   return (
@@ -13,7 +14,7 @@ export default function AboutPage() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="../../public/profile-ali.png"
+              src={getImagePathEnv("profile-ali.png")}
               width={400}
               height={400}
               alt="Ali Khaled"
