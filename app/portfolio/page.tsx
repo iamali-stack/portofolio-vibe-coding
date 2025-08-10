@@ -12,7 +12,7 @@ export default function PortfolioPage() {
       id: 1,
       title: "E-commerce Store",
       description: "A full-featured e-commerce platform with product listings, cart, and checkout.",
-      image: getImagePathEnv("images/ecommerce.png"),
+      image: getImagePathEnv("../public/images/ecommerce.png"),
       category: "Web Development",
       technologies: ["React", "Next.js", "Tailwind CSS", "Stripe"],
       githubLink: "https://github.com/iamali-stack/Ecommerce",
@@ -23,7 +23,7 @@ export default function PortfolioPage() {
       title: "My-Wallet",
       description:
         "A modern, responsive personal finance tracker built with React, Redux Toolkit, Vite, and Tailwind CSS.",
-      image: getImagePathEnv("images/my-wallet.png"),
+      image: getImagePathEnv("../public/images/my-wallet.png"),
       category: "Web Development",
       technologies: ["React", "Redux Toolkit", "Vite", "Tailwind CSS"],
       githubLink: "https://github.com/iamali-stack/My-Wallet",
@@ -34,7 +34,7 @@ export default function PortfolioPage() {
       title: "Weather-App",
       description:
         "A sleek weather app showing current conditions and 3-day forecasts. Features real-time weather data, location detection, and city search.",
-      image: getImagePathEnv("images/weather-app.png"),
+      image: getImagePathEnv("../public/images/weather-app.png"),
       category: "Web Development",
       technologies: ["HTML", "CSS", "JavaScript"],
       githubLink: "https://github.com/iamali-stack/weather-app",
@@ -45,7 +45,7 @@ export default function PortfolioPage() {
       title: "Movie-App",
       description:
         "A modern web application for browsing and discovering movies. This application provides features like searching, filtering, and viewing movie details.",
-      image: getImagePathEnv("images/movie-app.png"),
+      image: getImagePathEnv("../public/images/movie-app.png"),
       category: "Web Development",
       technologies: ["JavaScript", "HTML", "CSS"],
       githubLink: "https://github.com/iamali-stack/Movie-App",
@@ -56,7 +56,7 @@ export default function PortfolioPage() {
       title: "Games-OOP",
       description:
         "A front-end web application designed to showcase a collection of free-to-play games. The project is built using Object-Oriented Programming (OOP) principles in JavaScript and leverages modern web technologies.",
-      image: getImagePathEnv("images/games-oop.png"),
+      image: getImagePathEnv("../public/images/games-oop.png"),
       category: "Web Development",
       technologies: ["JavaScript", "HTML", "CSS"],
       githubLink: "https://github.com/iamali-stack/Games-OOP",
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
       title: "Quiz-App",
       description:
         "This is an interactive web-based Quiz Application that allows users to test their knowledge across various categories. The app uses the Open Trivia Database API to fetch questions dynamically.",
-      image: getImagePathEnv("images/quiz-app.png"),
+                  image: getImagePathEnv("../public/images/quiz-app.png"),
       category: "Web Development",
       technologies: ["JavaScript", "HTML", "CSS"],
       githubLink: "https://github.com/iamali-stack/Quiz-App",
@@ -78,7 +78,7 @@ export default function PortfolioPage() {
       title: "Yummy-App",
       description:
         "A recipe application that allows users to search for recipes, view details, and save their favorites. It features a responsive design and a user-friendly interface.",
-      image: getImagePathEnv("images/yummy-app.png"),
+                  image: getImagePathEnv("../public/images/yummy-app.png"),
       category: "Web Development",
       technologies: ["JavaScript", "HTML", "CSS", "API Integration"],
       githubLink: "https://github.com/iamali-stack/Yummy-App",
